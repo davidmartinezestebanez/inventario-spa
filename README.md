@@ -66,15 +66,10 @@ npm run dev
 
 ---
 
-## 🎬 Guion Recomendado para tu Videotutorial (5-7 Minutos)
+## 🎨 Características de la Interfaz Visual
 
-Este proyecto fue optimizado para que puedas grabarlo y explicarlo fluidamente de forma muy didáctica:
-
-| Tiempo | Sección | Qué Explicar y Enseñar |
-| :--- | :--- | :--- |
-| **0:00 - 1:00** | **Introducción e Interfaz** | Muestra el Dashboard funcionando. Añade un producto, edita uno existente y bórralo en tiempo real. Señala cómo cambia dinámicamente la tarjeta de **Stock Bajo** en base a las existencias (< 5). Explica el concepto de SPA desacoplada. |
-| **1:00 - 2:30** | **El Servidor Express (`server.js`)** | Abre `backend/server.js`. Explica de forma concisa el middleware `cors()`, el almacenamiento temporal en el array `productos` y cómo los endpoints `GET`, `POST`, `PUT`, `DELETE` manipulan dicho array y retornan JSON. |
-| **2:30 - 4:00** | **El Estado en React (`App.jsx`)** | Pasa al frontend en `App.jsx`. Muestra el gancho `useState` para almacenar productos y saber si estamos editando. Explica cómo `useEffect` hace el `fetch` inicial al montar el componente para traer los datos del servidor. |
-| **4:00 - 5:30** | **Operaciones CRUD (`App.jsx`)** | Enseña la función `handleSubmit`. Explica cómo envía peticiones `POST` (nuevo) o `PUT` (edición) serializando el objeto a JSON y cómo actualiza el estado local de forma inmutable usando `[...productos, nuevoProducto]` o `.map()`. Enseña la función `handleEliminar` y su `.filter()`. |
-| **5:30 - 6:30** | **Diseño y Reactividad Visual** | Muestra brevemente la hoja `index.css` enfocándote en las variables de color y los efectos. En `App.jsx`, destaca el renderizado condicional de las clases del stock (`healthy`, `warning`, `danger`) que crea las animaciones de alerta en la tabla. |
-| **6:30 - 7:00** | **Conclusión** | Cierra animando a los espectadores a clonar el proyecto, experimentar con él y expandir el sistema a una base de datos real. |
+El frontend ha sido diseñado con un estilo empresarial moderno utilizando **CSS nativo puro**:
+* **Dashboard Analítico**: Tarjetas de métricas automatizadas (Total de Productos, Valor de Inventario y Alertas).
+* **Control de Stock Dinámico**: Alertas visuales con badges animados de pulso cuando un producto tiene menos de 5 unidades.
+* **Modal de Borrado Premium**: Reemplaza el confirmador del navegador por un modal elegante con fondo difuminado (`backdrop-filter: blur(8px)`) y animación elástica.
+* **Buscador en Tiempo Real**: Filtro de coincidencia de texto instantáneo sin recargar la página.
